@@ -6,7 +6,7 @@
   margin: 0;
   list-style: none;
   outline: none;
-  font-family: 'Nunito', Roboto, system-ui, Tahoma, sans-serif;
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Chrome/Safari/Opera */
@@ -18,37 +18,59 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: $black;
+  background: $light;
+  color: $white;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: $white;
+
+  text-underline-offset: -37px;
+  text-decoration: underline;
+  text-underline-color: #F1CDB3;
+  text-decoration-thickness:3px;;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: $info;
+  outline: none;
+  text-underline-offset: 8px;
+  text-decoration: underline;
+  text-underline-color: #F1CDB3;
+  text-decoration-thickness:3px;;
+}
+
+span{
+  font-weight: 600;
+  letter-spacing: 4px;
 
 }
 
-a,
-span,
-p,
-b,
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
 h1,
 h2,
 h3,
 h4,
-h5 {
-  color: $black;
-}
-
-h1 {
-  font-size: 48px;
-}
-
-h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 30px;
-}
-
-a {
-  text-decoration: none;
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center;
 }
 
 //@mixin noselect {

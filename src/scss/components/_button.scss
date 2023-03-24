@@ -1,148 +1,69 @@
 @import '../variables';
 
-.button {
-  display: inline-block;
-  background-color: transparent;
-  border-radius: 30px;
-  padding: 10px 20px;
-  min-width: 100px;
+.button{
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+&__link{
+  position: relative;
+}
+
+a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: rgba(86, 90, 177, 0.96);
   text-align: center;
-  cursor: pointer;
-  transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
-  border: 1px solid transparent;
-  //@include noselect();
+  color: #fff;
+  border-radius: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border: 3px solid  rgba(86, 90, 177, 0.96);
+  transition: all .35s;
+}
 
-  &,
-  span {
-    color: #fff;
-  }
+&__icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
 
-  i,
-  span,
-  path,
-  svg {
-    transition: all $duration ease-in-out;
-  }
+&__icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  //fill: #2ecc71;
+  fill:$blue ;
+  transition: all .35s;
+}
 
-  &:hover {
-    background-color: darken($grey, 8%);
-  }
+a:hover{
+  width:35vw;
+  //border: 3px solid #2ecc71;
+  border: 3px solid $blue;
+  border-radius: 15px;
+  background: transparent;
+  letter-spacing: 1em;
+  color: $blue;
+}
 
-  &:active {
-    background-color: darken($grey, 12%);
-    transform: translateY(1px);
-  }
+a:hover + .icon{
+  border: 3px solid $blue;
+  right: -25%;
+}
 
-  &--circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    padding: 0;
-    border-width: 2px;
-  }
-
-  &--black {
-    background-color: $black;
-
-    &:hover,
-    &:active {
-      background-color: lighten($color: $black, $amount: 10);
-    }
-  }
-
-  &--outline {
-    background-color: #fff;
-    border-color: $pink;
-    &,
-    span {
-      color: $pink;
-    }
-
-    svg {
-      path {
-        fill: $pink;
-      }
-    }
-
-    &:hover {
-      background-color: $grey;
-
-      &,
-      span {
-        color: #fff;
-      }
-
-      svg {
-        path {
-          fill: #fff;
-        }
-      }
-    }
-
-    &:active {
-      background-color: darken($grey, 8%);
-    }
-  }
-
-  &__delimiter {
-    width: 1px;
-    height: 25px;
-    background-color: rgba(255, 255, 255, 0.25);
-    margin-left: 14px;
-    margin-right: 14px;
-  }
-
-  &--add {
-    svg {
-      margin-right: 2px;
-    }
-
-    span {
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    &:hover {
-      i {
-        background-color: #fff;
-        color: $grey;
-      }
-    }
-
-    i {
-      display: inline-block;
-      border-radius: 30px;
-      background-color: $grey;
-      color: #fff;
-      font-weight: 600;
-      width: 22px;
-      height: 22px;
-      font-style: normal;
-      font-size: 13px;
-      line-height: 22px;
-      position: relative;
-      top: -1px;
-      left: 3px;
-    }
-  }
-
-  &--cart {
-    display: flex;
-    align-items: center;
-    line-height: 23px;
-    padding: 12px 25px;
-
-    svg {
-      margin-right: 8px;
-      margin-bottom: 1px;
-    }
-
-    span {
-      font-weight: 600;
-      font-size: 16px;
-    }
-  }
 }
