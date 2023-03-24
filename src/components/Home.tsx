@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 const Home = () => {
     const name="User"
 
+    
     return (
         <div className='home'>
         <Link draggable={'false'} className="home__link" to={'/login'}>login</Link>
